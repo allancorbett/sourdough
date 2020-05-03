@@ -56,7 +56,7 @@ function upSpc(e) {
 function calc() {
   let calcW = parseFloat((s / 2 + f) * (h / 100) - s / 2);
   let calcT = parseFloat(s + f + w);
-  let calcSg = parseFloat((spc / 100) * t);
+  let calcSg = parseFloat((spc / 100) * calcT);
   water.textContent = calcW.toFixed(1);
   total.textContent = calcT + calcSg;
   saltG.textContent = calcSg.toFixed(1);
