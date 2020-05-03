@@ -16,9 +16,19 @@
       <hr />
       <form>
         <label for="starter">Starter (g)</label>
-        <input type="number" id="starter" placeholder="Starter (g)" />
+        <input
+          type="number"
+          inputmode="decimal"
+          id="starter"
+          placeholder="Starter (g)"
+        />
         <label for="flour">Flour (g)</label>
-        <input type="number" id="flour" placeholder="Flour (g)" />
+        <input
+          type="number"
+          inputmode="decimal"
+          id="flour"
+          placeholder="Flour (g)"
+        />
         <label for="hydration">Hydration (%) *</label>
         <input
           type="number"
@@ -27,13 +37,19 @@
           placeholder="Hydration (%)"
         />
         <label for="salt">Salt (%)</label>
-        <input type="number" step=".1" id="salt" placeholder="Salt (%)" />
+        <input
+          type="number"
+          inputmode="decimal"
+          step=".1"
+          id="salt"
+          placeholder="Salt (%)"
+        />
         <label for="water">Water (g)</label>
-        <input id="water" placeholder="Water (g)" disabled />
+        <span id="water" placeholder="Water (g)">Water (g)</span>
         <label for="salt-weight">Salt (g)</label>
-        <input id="salt-weight" placeholder="Salt (g)" disabled />
+        <span id="salt-weight" placeholder="Salt (g)">Salt (g)</span>
         <label for="weight">Total Weight (g)</label>
-        <input id="total" placeholder="Total Weight" disabled />
+        <span id="total" placeholder="Total Weight">Total Weight</span>
       </form>
       <hr />
       <div>

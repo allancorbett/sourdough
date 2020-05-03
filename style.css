@@ -10,8 +10,7 @@
   --color-border: hsl(0, 0%, 60%);
   --radius: calc(var(--base) / 6);
 }
-h1,
-label {
+h1 {
   font-family: "Kavoon", cursive;
 }
 body {
@@ -44,6 +43,7 @@ input {
   border-radius: var(--radius);
   background-color: var(--color-background);
   box-sizing: border-box;
+  font-weight: bold;
 }
 input:disabled {
   color: var(--color-text);
@@ -52,5 +52,8 @@ input:disabled {
 }
 label {
   font-weight: light;
-  /* white-space: nowrap; */
+}
+span {
+  font-weight: bold;
+  padding: 0 var(--gap);
 }

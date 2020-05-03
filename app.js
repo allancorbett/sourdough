@@ -9,10 +9,10 @@ const saltG = document.getElementById("salt-weight");
 let s = starter.value;
 let f = flour.value;
 let h = hydration.value;
-let w = water.value;
+let w = water.textContent;
 let spc = saltPc.value;
-let sg = saltG.value;
-let t = total.value;
+let sg = saltG.textContent;
+let t = total.textContent;
 
 s = 150;
 f = 300;
@@ -25,10 +25,10 @@ sg = (spc / 100) * t;
 starter.value = parseFloat(s);
 flour.value = parseFloat(f);
 hydration.value = parseFloat(h);
-water.value = parseFloat(w);
-total.value = parseFloat(t);
+water.textContent = parseFloat(w);
+total.textContent = parseFloat(t);
 saltPc.value = parseFloat(spc);
-saltG.value = parseFloat(sg);
+saltG.textContent = parseFloat(sg);
 
 starter.addEventListener("change", upS);
 function upS(e) {
@@ -57,7 +57,7 @@ function calc() {
   let calcW = parseFloat((s / 2 + f) * (h / 100) - s / 2);
   let calcT = parseFloat(s + f + w);
   let calcSg = parseFloat((spc / 100) * t);
-  water.value = calcW.toFixed(1);
-  total.value = calcT + calcSg;
-  saltG.value = calcSg.toFixed(1);
+  water.textContent = calcW.toFixed(1);
+  total.textContent = calcT + calcSg;
+  saltG.textContent = calcSg.toFixed(1);
 }
