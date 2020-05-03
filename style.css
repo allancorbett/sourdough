@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Kavoon&display=swap");
-
 :root {
   --base: 1rem;
   --gap: var(--base);
@@ -11,7 +9,7 @@
   --radius: calc(var(--base) / 6);
 }
 h1 {
-  font-family: "Kavoon", cursive;
+  font-weight: 900;
 }
 body {
   color: var(--color-text);
@@ -36,6 +34,7 @@ form {
   margin: var(--gap) 0;
 }
 input {
+  appearance: none;
   font-weight: bold;
   font-size: var(--base);
   padding: var(--gap);
@@ -43,7 +42,7 @@ input {
   border-radius: var(--radius);
   background-color: var(--color-background);
   box-sizing: border-box;
-  font-weight: bold;
+  font-weight: 900;
 }
 input:disabled {
   color: var(--color-text);
@@ -54,6 +53,6 @@ label {
   font-weight: light;
 }
 span {
-  font-weight: bold;
+  font-weight: 900;
   padding: 0 var(--gap);
 }
