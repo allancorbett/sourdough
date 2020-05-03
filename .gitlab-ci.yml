@@ -1,5 +1,16 @@
-mkdir public
-cd public
-mv ../index.html index.html
-mv ../app.js app.js
-mv ../style.css style.css
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+    - echo 'Nothing to do...'
+    - mkdir public
+    - cd public
+    - mv ../index.html index.html
+    - mv ../app.js app.js
+    - mv ../style.css style.css
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

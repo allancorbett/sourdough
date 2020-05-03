@@ -13,37 +13,35 @@
         Update the amount of Starter, Flour or Hydration to calculate how much
         Water is needed.
       </p>
-      <p>
-        Higher hydration will produce a bigger crumb and a thinner crust.
-        Broadly.
-      </p>
       <hr />
       <form>
-        <div class="input">
-          <label for="starter">Starter (g)</label>
-          <input type="number" id="starter" placeholder="Starter (g)" />
-          <small
-            >Assuming that the Starter is 100% hydration (equal parts flour and
-            water)</small
-          >
-        </div>
-        <div class="input">
-          <label for="flour">Flour (g)</label>
-          <input type="number" id="flour" placeholder="Flour (g)" />
-        </div>
-        <div class="input">
-          <label for="hydration">Hydration (%)</label>
-          <input type="number" id="hydration" placeholder="Hydration (%)" />
-        </div>
-        <div class="input">
-          <label for="water">Water (g)</label>
-          <input id="water" placeholder="Water (g)" disabled />
-        </div>
-        <div class="input">
-          <label for="weight">Total Weight (g)</label>
-          <input id="total" placeholder="Total Weight" disabled />
-        </div>
+        <label for="starter">Starter (g)</label>
+        <input type="number" id="starter" placeholder="Starter (g)" />
+        <label for="flour">Flour (g)</label>
+        <input type="number" id="flour" placeholder="Flour (g)" />
+        <label for="hydration">Hydration (%) *</label>
+        <input
+          type="number"
+          step=".1"
+          id="hydration"
+          placeholder="Hydration (%)"
+        />
+        <label for="salt">Salt (%)</label>
+        <input type="number" step=".1" id="salt" placeholder="Salt (%)" />
+        <label for="water">Water (g)</label>
+        <input id="water" placeholder="Water (g)" disabled />
+        <label for="salt-weight">Salt (g)</label>
+        <input id="salt-weight" placeholder="Salt (g)" disabled />
+        <label for="weight">Total Weight (g)</label>
+        <input id="total" placeholder="Total Weight" disabled />
       </form>
+      <hr />
+      <div>
+        <small
+          >* Assuming that the Starter is 100% hydration (equal parts flour and
+          water)</small
+        >
+      </div>
     </div>
     <script src="app.js"></script>
   </body>
