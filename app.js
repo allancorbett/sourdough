@@ -14,11 +14,11 @@ let spc = saltPc.value;
 let sg = saltG.textContent;
 let t = total.textContent;
 
-s = 150;
-f = 300;
+s = 300;
+f = 500;
 h = 60;
 w = 240;
-t = 1040;
+t = 1050;
 spc = 1;
 sg = (spc / 100) * t;
 
