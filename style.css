@@ -5,11 +5,12 @@
   --color-text: hsl(0, 0%, 12%);
   --color-background: hsl(0, 0%, 99%);
   --color-background-disabled: hsl(0, 0%, 95%);
-  --color-border: hsl(0, 0%, 60%);
+  --color-border: hsl(0, 0%, 70%);
   --radius: calc(var(--base) / 6);
 }
 h1 {
   font-weight: 900;
+  text-align: center;
 }
 body {
   color: var(--color-text);
@@ -18,13 +19,18 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: var(--gap);
 }
+a {
+  color: var(--color-text);
+}
 .container {
-  max-width: 50ch;
+  max-width: 70ch;
   margin-left: auto;
   margin-right: auto;
 }
 hr {
   margin: var(--gap) 0;
+  border-color: var(--color-border);
+  border-top: 0;
 }
 form {
   display: grid;
@@ -55,4 +61,8 @@ label {
 span {
   font-weight: 900;
   padding: 0 var(--gap);
+}
+
+footer {
+  color: var(--color-border);
 }
