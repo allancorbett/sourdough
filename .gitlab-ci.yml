@@ -1,0 +1,5 @@
+mkdir public
+cd public
+mv ../index.html index.html
+mv ../app.js app.js
+mv ../style.css style.css
