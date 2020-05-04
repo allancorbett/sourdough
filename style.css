@@ -10,6 +10,7 @@
 }
 h1 {
   font-weight: 900;
+  margin-top: 0;
 }
 body {
   color: var(--color-text);
