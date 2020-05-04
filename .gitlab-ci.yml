@@ -9,7 +9,8 @@ pages:
     - mv ../index.html index.html
     - mv ../app.js app.js
     - mv ../style.css style.css
-    - mv ../img public/img
+    - cd ..
+    - mv img/ public/img/
   artifacts:
     paths:
       - public
