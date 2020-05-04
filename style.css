@@ -10,7 +10,6 @@
 }
 h1 {
   font-weight: 900;
-  text-align: center;
 }
 body {
   color: var(--color-text);
@@ -18,14 +17,22 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: var(--gap);
+  background-color: var(--color-background);
+  background-image: radial-gradient(var(--color-text) 2px, transparent 2px),
+    radial-gradient(var(--color-text) 2px, transparent 2px);
+  background-size: calc(20 * 2px) calc(20 * 2px);
+  background-position: 0 0, calc(10 * 2px) calc(10 * 2px);
 }
 a {
   color: var(--color-text);
 }
 .container {
+  background: var(--color-background);
   max-width: 70ch;
   margin-left: auto;
   margin-right: auto;
+  padding: var(--gap);
+  box-shadow: 0 0 var(--gap) var(--color-background-disabled);
 }
 hr {
   margin: var(--gap) 0;
@@ -64,5 +71,8 @@ span {
 }
 
 footer {
+  text-align: center;
+  margin-top: var(--gap);
+  padding-top: var(--gap);
   color: var(--color-border);
 }

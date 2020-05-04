@@ -15,11 +15,11 @@
       <h1>Sourdough Calculator</h1>
       <p>
         Update the amount of Starter, Flour or Hydration to calculate how much
-        Water is needed.
+        water is needed.
       </p>
       <hr />
       <form>
-        <label for="starter">Starter (g) ♥︎</label>
+        <label for="starter">Starter (g) <sup>♦︎</sup></label>
         <input
           type="number"
           inputmode="decimal"
@@ -36,11 +36,12 @@
         <label for="hydration">Hydration (%)</label>
         <input
           type="number"
+          inputmode="decimal"
           step=".1"
           id="hydration"
           placeholder="Hydration (%)"
         />
-        <label for="salt">Salt (%) ♣︎</label>
+        <label for="salt">Salt (%) <sup>♣</sup></label>
         <input
           type="number"
           inputmode="decimal"
@@ -49,23 +50,21 @@
           placeholder="Salt (%)"
         />
         <label for="water">Water (g)</label>
-        <span id="water" placeholder="Water (g)">Water (g)</span>
+        <span id="water">Water (g)</span>
         <label for="salt-weight">Salt (g)</label>
-        <span id="salt-weight" placeholder="Salt (g)">Salt (g)</span>
-        <label for="weight">Total Weight (g) ♠︎</label>
-        <span id="total" placeholder="Total Weight">Total Weight</span>
+        <span id="salt-weight">Salt (g)</span>
+        <label for="bread">Bread (g) <sup>♠︎</sup></label>
+        <span id="bread">Bread</span>
       </form>
       <hr />
       <small
         ><p>
-          ♥︎ Assuming that the Starter is 100% hydration (equal parts flour and
-          water)
+          <sup>♦︎</sup> Assuming that the Starter is 100% hydration (equal parts
+          flour and water)
         </p>
+        <p><sup>♣︎</sup> More than 1% might make things funky but your call</p>
         <p>
-          ♣︎ More than 1% might make things funky but your call
-        </p>
-        <p>
-          ♠︎ A usual fancy supermarket sourdough loaf is about
+          <sup>♣︎</sup> A usual fancy supermarket sourdough loaf is about
           <a
             target="_blank"
             href="https://www.waitrose.com/ecom/products/no1-white-sourdough-bread/493513-373129-373130"
@@ -74,6 +73,52 @@
         </p></small
       >
       <hr />
+      <div>
+        <h2>Method</h2>
+        <p>
+          Your milage may vary but this tends to work for me. It's an adapted
+          version of
+          <a
+            target="_blank"
+            href="https://www.bbc.co.uk/food/recipes/how_to_make_sourdough_08213"
+            >this recipe by Patrick Ryan</a
+          >.
+        </p>
+        <ol>
+          <li>
+            Put the starter, flour, salt and water in a Kitchen Aid type mixer
+          </li>
+          <li>
+            With the dough hook attachment, mix for maybe 3-5 minutes until the
+            dough becomes smooth-ish (rather than raggedy)
+          </li>
+          <li>Place the dough in a lightly oiled bowl</li>
+          <li>
+            Cover the bowl and leave until the dough has grown. How long this
+            takes and how much it'll grow by all depends on your starter and the
+            temperature. Warm room with active starter - maybe 3 hours
+          </li>
+          <li>Give your dough a very gentle knead</li>
+          <li>Cover the bowl for roughly the same time as before</li>
+          <li>
+            When the dough has risen again, turn your oven on to 200c if it's a
+            convection oven and place a pizza stone on a shelf
+          </li>
+          <li>
+            Once the oven is hot (longer than usual since the stone needs to be
+            hot too), sprinkle some flour on the stone, gently place your dough
+            on the stone and score with a sharp knife
+          </li>
+          <li>
+            Put your dough in the oven and place 3-4 ice cubes in the bottom of
+            the oven to create steam
+          </li>
+          <li>
+            Bake for ~40 minutes or until the bread makes a nice hollow noise
+            when tapped on the bottom.
+          </li>
+        </ol>
+      </div>
       <footer>
         <p>
           Baked with 🌾 and 🚰 by

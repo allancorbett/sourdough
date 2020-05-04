@@ -1,4 +1,4 @@
-const total = document.getElementById("total");
+const bread = document.getElementById("bread");
 const starter = document.getElementById("starter");
 const flour = document.getElementById("flour");
 const hydration = document.getElementById("hydration");
@@ -12,21 +12,21 @@ let h = hydration.value;
 let w = water.textContent;
 let spc = saltPc.value;
 let sg = saltG.textContent;
-let t = total.textContent;
+let b = bread.textContent;
 
 s = 300;
 f = 500;
 h = 60;
 w = 240;
-t = 1050;
+b = 1050;
 spc = 1;
-sg = (spc / 100) * t;
+sg = (spc / 100) * b;
 
 starter.value = parseFloat(s);
 flour.value = parseFloat(f);
 hydration.value = parseFloat(h);
 water.textContent = parseFloat(w);
-total.textContent = parseFloat(t);
+bread.textContent = parseFloat(b);
 saltPc.value = parseFloat(spc);
 saltG.textContent = parseFloat(sg);
 
@@ -55,9 +55,9 @@ function upSpc(e) {
 
 function calc() {
   let calcW = parseFloat((s / 2 + f) * (h / 100) - s / 2);
-  let calcT = parseFloat(s + f + w);
-  let calcSg = parseFloat((spc / 100) * calcT);
+  let calcB = parseFloat(s + f + w);
+  let calcSg = parseFloat((spc / 100) * calcB);
   water.textContent = calcW.toFixed(1);
-  total.textContent = calcT + calcSg;
+  bread.textContent = calcB + calcSg;
   saltG.textContent = calcSg.toFixed(1);
 }
