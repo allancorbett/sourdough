@@ -4,18 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sourdough Hyrdation Calculator</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
     <link
       rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewbox='0 0 100 100'><text y='1em' font-size='28'>🍞</text></svg>"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#15242d" />
+    <meta name="msapplication-TileColor" content="#15242d" />
+    <meta name="theme-color" content="#15242d" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <h1>Sourdough Hyrdation Calculator</h1>
       <p>
-        Update the amount of Starter, Flour or Hydration to calculate how much
-        water is needed.
+        A simple calculator to help you make better sourdough.
       </p>
       <hr />
       <form>
@@ -57,12 +75,26 @@
         <span id="bread">Bread</span>
       </form>
       <hr />
+      <p>
+        A higher hydration leads to a bigger crumb and thinner crust - broadly
+        speaking.
+      </p>
+
       <small
         ><p>
           ♦︎ Assuming that the Starter is 100% hydration (equal parts flour and
           water)
         </p>
-        <p>♣︎ More than 1% might make things funky but your call</p>
+        <p>
+          ♣︎ The percentage is based on a
+          <a
+            href="https://en.wikipedia.org/wiki/Baker_percentage"
+            target="_blank"
+            >bakers percentage</a
+          >
+          so is a percentage based on the total amount of flour in the recipe
+          (including the starter)
+        </p>
         <p>
           ♣︎ A usual fancy supermarket sourdough loaf is about
           <a

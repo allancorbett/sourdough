@@ -3,12 +3,13 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-    - echo 'Nothing to do...'
     - mkdir public
+    - mkdir public/img
     - cd public
     - mv ../index.html index.html
     - mv ../app.js app.js
     - mv ../style.css style.css
+    - mv ../img public/img
   artifacts:
     paths:
       - public

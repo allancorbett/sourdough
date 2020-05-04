@@ -30,7 +30,7 @@ if (localStorage.getItem("h") === null) {
   h = parseFloat(localStorage.getItem("h"));
 }
 if (localStorage.getItem("spc") === null) {
-  localStorage.setItem("spc", 1);
+  localStorage.setItem("spc", 1.5);
 } else {
   spc = parseFloat(localStorage.getItem("spc"));
 }
@@ -40,7 +40,7 @@ if (localStorage.getItem("w") === null) {
   w = parseFloat(localStorage.getItem("w"));
 }
 if (localStorage.getItem("sg") === null) {
-  localStorage.setItem("sg", 5.4);
+  localStorage.setItem("sg", 4.9);
 } else {
   sg = parseFloat(localStorage.getItem("sg"));
 }
@@ -88,7 +88,7 @@ function calc() {
   calcW = calcFlour * calcHydration - calcStarter;
   let w = parseFloat(calcW.toFixed(0));
   calcB = s + f + w;
-  calcSg = (spc / 100) * calcB;
+  calcSg = (spc / 100) * calcFlour;
   let sg = parseFloat(calcSg.toFixed(1));
   calcTotalBread = calcB + calcSg;
   let b = parseFloat(calcTotalBread.toFixed(0));

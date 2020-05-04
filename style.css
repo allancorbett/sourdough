@@ -2,11 +2,11 @@
   --base: 1rem;
   --gap: var(--base);
   --gap-tight: calc(var(--gap) / 2);
-  --color-text: hsl(327, 31%, 11%);
-  --color-background: hsl(32, 50%, 90%);
+  --color-text: hsl(202, 54%, 18%);
+  --color-background: hsl(34, 33%, 96%);
   --color-body-background: hsl(16, 36%, 48%);
   --color-input: hsl(0, 0%, 95%);
-  --color-dots: hsl(28, 53%, 68%);
+  --color-dots: hsl(28, 13%, 68%);
   --radius: calc(var(--base) / 6);
 }
 h1 {
@@ -24,8 +24,11 @@ body {
   align-items: center;
   justify-content: center;
   background-color: var(--color-text);
-  background-image: radial-gradient(var(--color-dots) 2px, transparent 2px),
-    radial-gradient(var(--color-dots) 2px, transparent 2px);
+  background-image: radial-gradient(
+      var(--color-body-background) 2px,
+      transparent 2px
+    ),
+    radial-gradient(var(--color-body-background) 2px, transparent 2px);
   background-size: calc(20 * 2px) calc(20 * 2px);
   background-position: 0 0, calc(10 * 2px) calc(10 * 2px);
   overflow-x: hidden;
