@@ -16,12 +16,17 @@ body {
   line-height: 1.4;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  margin: var(--gap);
-  background-color: var(--color-background);
-  background-image: radial-gradient(var(--color-text) 2px, transparent 2px),
-    radial-gradient(var(--color-text) 2px, transparent 2px);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-text);
+  background-image: radial-gradient(var(--color-border) 2px, transparent 2px),
+    radial-gradient(var(--color-border) 2px, transparent 2px);
   background-size: calc(20 * 2px) calc(20 * 2px);
   background-position: 0 0, calc(10 * 2px) calc(10 * 2px);
+  overflow-x: hidden;
 }
 a {
   color: var(--color-text);
@@ -29,10 +34,7 @@ a {
 .container {
   background: var(--color-background);
   max-width: 70ch;
-  margin-left: auto;
-  margin-right: auto;
   padding: var(--gap);
-  box-shadow: 0 0 var(--gap) var(--color-background-disabled);
 }
 hr {
   margin: var(--gap) 0;
@@ -64,6 +66,7 @@ input:disabled {
 }
 label {
   font-weight: light;
+  white-space: nowrap;
 }
 span {
   font-weight: 900;
