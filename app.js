@@ -6,48 +6,48 @@ let bread = document.getElementById("bread"),
   saltPc = document.getElementById("salt"),
   saltG = document.getElementById("salt-weight");
 
-let s = starter.value,
-  f = flour.value,
-  h = hydration.value,
-  w = water.textContent,
-  spc = saltPc.value,
-  sg = saltG.textContent,
-  b = bread.textContent;
+let s, f, h, w, spc, sg, b;
+
+starter.addEventListener("change", updateS);
+flour.addEventListener("change", updateF);
+hydration.addEventListener("change", updateH);
+salt.addEventListener("change", updateSpc);
 
 if (localStorage.getItem("s") === null) {
   localStorage.setItem("s", 150);
 } else {
-  s = 150;
+  s = parseFloat(localStorage.getItem("s"));
 }
+
 if (localStorage.getItem("f") === null) {
   localStorage.setItem("f", 250);
 } else {
-  f = 250;
+  f = parseFloat(localStorage.getItem("f"));
 }
 if (localStorage.getItem("h") === null) {
-  localStorage.setItem("h", 66.6);
+  localStorage.setItem("h", 65);
 } else {
-  h = 66.6;
+  h = parseFloat(localStorage.getItem("h"));
 }
 if (localStorage.getItem("spc") === null) {
   localStorage.setItem("spc", 1);
 } else {
-  spc = 1;
+  spc = parseFloat(localStorage.getItem("spc"));
 }
 if (localStorage.getItem("w") === null) {
-  localStorage.setItem("w", 208);
+  localStorage.setItem("w", 136);
 } else {
-  w = 208;
+  w = parseFloat(localStorage.getItem("w"));
 }
 if (localStorage.getItem("sg") === null) {
-  localStorage.setItem("sg", 7.4);
+  localStorage.setItem("sg", 5.4);
 } else {
-  sg = 7.4;
+  sg = parseFloat(localStorage.getItem("sg"));
 }
 if (localStorage.getItem("b") === null) {
-  localStorage.setItem("b", 747.4);
+  localStorage.setItem("b", 541);
 } else {
-  b = 747.4;
+  b = parseFloat(localStorage.getItem("b"));
 }
 
 starter.value = parseFloat(localStorage.getItem("s"));
@@ -58,42 +58,44 @@ bread.textContent = parseFloat(localStorage.getItem("b"));
 saltPc.value = parseFloat(localStorage.getItem("spc"));
 saltG.textContent = parseFloat(localStorage.getItem("sg"));
 
-starter.addEventListener("change", upS);
-function upS(e) {
+function updateS(e) {
   s = parseFloat(e.target.value);
   localStorage.setItem("s", s);
   calc();
 }
 
-flour.addEventListener("change", upF);
-function upF(e) {
+function updateF(e) {
   f = parseFloat(e.target.value);
   localStorage.setItem("f", f);
   calc();
 }
 
-hydration.addEventListener("change", upH);
-function upH(e) {
+function updateH(e) {
   h = parseFloat(e.target.value);
   localStorage.setItem("h", h);
   calc();
 }
-salt.addEventListener("change", upSpc);
-function upSpc(e) {
+function updateSpc(e) {
   spc = parseFloat(e.target.value);
   localStorage.setItem("spc", spc);
   calc();
 }
 
 function calc() {
-  let calcW = parseFloat((s / 2 + f) * (h / 100) - s / 2);
-  let calcB = parseFloat(s + f + w);
-  let calcSg = parseFloat((spc / 100) * calcB);
-  let calcTotalBread = calcB + calcSg;
-  bread.textContent = calcTotalBread.toFixed(1);
-  saltG.textContent = calcSg.toFixed(1);
-  water.textContent = calcW.toFixed(1);
-  localStorage.setItem("w", calcW.toFixed(1));
-  localStorage.setItem("b", calcB + calcSg);
-  localStorage.setItem("sg", calcSg.toFixed(1));
+  calcStarter = s / 2;
+  calcFlour = calcStarter + f;
+  calcHydration = h / 100;
+  calcW = calcFlour * calcHydration - calcStarter;
+  let w = parseFloat(calcW.toFixed(0));
+  calcB = s + f + w;
+  calcSg = (spc / 100) * calcB;
+  let sg = parseFloat(calcSg.toFixed(1));
+  calcTotalBread = calcB + calcSg;
+  let b = parseFloat(calcTotalBread.toFixed(0));
+  bread.textContent = b;
+  saltG.textContent = sg;
+  water.textContent = w;
+  localStorage.setItem("b", b);
+  localStorage.setItem("sg", sg);
+  localStorage.setItem("w", w);
 }
