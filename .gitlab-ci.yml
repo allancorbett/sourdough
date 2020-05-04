@@ -4,13 +4,11 @@ pages:
   stage: deploy
   script:
     - mkdir public
-    - mkdir public/img
     - cd public
     - mv ../index.html index.html
     - mv ../app.js app.js
     - mv ../style.css style.css
-    - cd ..
-    - mv img/ public/img/
+    - mv ../img/ public/img/
   artifacts:
     paths:
       - public
