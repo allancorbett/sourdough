@@ -2,10 +2,10 @@
   --base: 1rem;
   --gap: var(--base);
   --gap-tight: calc(var(--gap) / 2);
-  --color-text: hsl(0, 0%, 12%);
-  --color-background: hsl(0, 0%, 99%);
-  --color-background-disabled: hsl(0, 0%, 95%);
-  --color-border: hsl(0, 0%, 70%);
+  --color-text: hsl(327, 31%, 11%);
+  --color-background: #f2e6d8;
+  --color-input: hsl(0, 0%, 95%);
+  --color-border: #d9ac84;
   --radius: calc(var(--base) / 6);
 }
 h1 {
@@ -22,7 +22,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-text);
+  background-color: #a6654e;
   background-image: radial-gradient(var(--color-border) 2px, transparent 2px),
     radial-gradient(var(--color-border) 2px, transparent 2px);
   background-size: calc(20 * 2px) calc(20 * 2px);
@@ -56,9 +56,9 @@ input {
   font-weight: bold;
   font-size: var(--base);
   padding: var(--gap);
-  border: 1px solid var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  background-color: var(--color-background);
+  background-color: var(--color-input);
   box-sizing: border-box;
   font-weight: 900;
 }
@@ -78,5 +78,5 @@ span {
 
 footer {
   text-align: center;
-  color: var(--color-border);
+  color: #734136;
 }

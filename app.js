@@ -15,19 +15,19 @@ let s = starter.value,
   b = bread.textContent;
 
 if (localStorage.getItem("s") === null) {
-  localStorage.setItem("s", 300);
+  localStorage.setItem("s", 150);
 } else {
-  s = 300;
+  s = 150;
 }
 if (localStorage.getItem("f") === null) {
-  localStorage.setItem("f", 500);
+  localStorage.setItem("f", 250);
 } else {
-  f = 500;
+  f = 250;
 }
 if (localStorage.getItem("h") === null) {
-  localStorage.setItem("h", 60);
+  localStorage.setItem("h", 66.6);
 } else {
-  h = 60;
+  h = 66.6;
 }
 if (localStorage.getItem("spc") === null) {
   localStorage.setItem("spc", 1);
@@ -35,19 +35,19 @@ if (localStorage.getItem("spc") === null) {
   spc = 1;
 }
 if (localStorage.getItem("w") === null) {
-  localStorage.setItem("w", 240);
+  localStorage.setItem("w", 208);
 } else {
-  w = 240;
+  w = 208;
 }
 if (localStorage.getItem("sg") === null) {
-  localStorage.setItem("sg", 10.5);
+  localStorage.setItem("sg", 7.4);
 } else {
-  sg = 10.5;
+  sg = 7.4;
 }
 if (localStorage.getItem("b") === null) {
-  localStorage.setItem("b", 1050);
+  localStorage.setItem("b", 747.4);
 } else {
-  b = 1050;
+  b = 747.4;
 }
 
 starter.value = parseFloat(localStorage.getItem("s"));
