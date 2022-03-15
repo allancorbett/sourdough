@@ -30,7 +30,7 @@ if (localStorage.getItem("h") === null) {
   h = parseFloat(localStorage.getItem("h"));
 }
 if (localStorage.getItem("spc") === null) {
-  localStorage.setItem("spc", 1.5);
+  localStorage.setItem("spc", 3);
 } else {
   spc = parseFloat(localStorage.getItem("spc"));
 }
@@ -82,15 +82,15 @@ function updateSpc(e) {
 }
 
 function calc() {
-  calcStarter = s / 2;
-  calcFlour = calcStarter + f;
-  calcHydration = h / 100;
-  calcW = calcFlour * calcHydration - calcStarter;
+  let calcStarter = s / 2;
+  let calcFlour = calcStarter + f;
+  let calcHydration = h / 100;
+  let calcW = calcFlour * calcHydration - calcStarter;
   let w = parseFloat(calcW.toFixed(0));
-  calcB = s + f + w;
-  calcSg = (spc / 100) * calcFlour;
+  let calcB = s + f + w;
+  let calcSg = (spc / 100) * calcFlour;
   let sg = parseFloat(calcSg.toFixed(1));
-  calcTotalBread = calcB + calcSg;
+  let calcTotalBread = calcB + calcSg;
   let b = parseFloat(calcTotalBread.toFixed(0));
   bread.textContent = b;
   saltG.textContent = sg;

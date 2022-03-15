@@ -51,7 +51,7 @@ hr {
 form {
   display: grid;
   grid-gap: var(--gap);
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto minmax(4ch, 1fr);
   align-items: center;
   margin: var(--gap) 0;
 }
